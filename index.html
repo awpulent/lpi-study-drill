@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LPI Essentials — Study Drill</title>
+
+<meta name="description" content="Repeat-until-mastered drill over the LPI Linux Essentials question bank.">
+<meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+
+<!-- Add to Home Screen -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="LPI Drill">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">LPI Essentials <span>Study Drill</span></div>
+  <div class="counters">
+    <div class="counter"><b id="statMastered">0</b><span>mastered</span></div>
+    <div class="counter"><b id="statRemaining">0</b><span>in bank</span></div>
+    <div class="counter"><b id="statStreak">0</b><span>streak</span></div>
+    <div class="counter"><b id="statAccuracy">—</b><span>accuracy</span></div>
+  </div>
+  <div class="topbar-actions">
+    <button id="btnStats" class="ghost" type="button" title="Progress details">Progress</button>
+    <button id="btnReset" class="ghost danger" type="button" title="Clear all progress">Reset</button>
+  </div>
+</header>
+
+<div class="progressbar"><div id="progressFill"></div></div>
+
+<main>
+  <!-- Quiz -->
+  <section id="quizView" class="card">
+    <div class="qmeta">
+      <span id="qTag" class="tag">Question</span>
+      <span id="qHint" class="hint"></span>
+    </div>
+    <h1 id="qText"></h1>
+    <form id="options" class="options" autocomplete="off"></form>
+
+    <div id="feedback" class="feedback" hidden></div>
+
+    <div class="actions">
+      <button id="btnSubmit" class="primary" type="button" disabled>Check answer</button>
+      <button id="btnNext" class="primary" type="button" hidden>Next question</button>
+      <span class="kbd-hint">
+        <kbd>1</kbd>–<kbd>9</kbd> select · <kbd>Enter</kbd> check / next
+      </span>
+    </div>
+  </section>
+
+  <!-- All done -->
+  <section id="doneView" class="card done" hidden>
+    <div class="done-mark">✓</div>
+    <h1>Bank cleared.</h1>
+    <p id="doneSummary"></p>
+    <div class="actions">
+      <button id="btnResetDone" class="primary" type="button">Reset and go again</button>
+    </div>
+  </section>
+</main>
+
+<!-- Progress panel -->
+<div id="statsOverlay" class="overlay" hidden>
+  <div class="sheet">
+    <div class="sheet-head">
+      <h2>Progress</h2>
+      <button id="btnCloseStats" class="ghost" type="button">Close</button>
+    </div>
+
+    <div class="grid">
+      <div class="stat"><b id="pMastered">0</b><span>Mastered</span></div>
+      <div class="stat"><b id="pRemaining">0</b><span>Still in bank</span></div>
+      <div class="stat"><b id="pAnswered">0</b><span>Answers given</span></div>
+      <div class="stat"><b id="pBest">0</b><span>Best streak</span></div>
+    </div>
+
+    <h3>Trouble spots <small>questions you've missed, most-missed first</small></h3>
+    <ol id="troubleList" class="trouble"></ol>
+
+    <div class="sheet-foot">
+      <button id="btnExport" class="ghost" type="button">Export progress</button>
+      <button id="btnImport" class="ghost" type="button">Import progress</button>
+      <input id="fileImport" type="file" accept="application/json" hidden>
+    </div>
+  </div>
+</div>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
