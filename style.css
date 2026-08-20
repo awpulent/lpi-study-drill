@@ -28,6 +28,11 @@
 
 * { box-sizing: border-box; }
 
+/* The `hidden` attribute comes from the UA stylesheet, so ANY author `display`
+   rule silently outranks it (.overlay { display: grid } did exactly that and
+   pinned the Progress panel open). Keep this ahead of every layout rule. */
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   background: var(--bg);
