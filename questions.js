@@ -277,10 +277,13 @@ const QUESTION_BANK = [
   },
   {
     "id": 20,
-    "question": "What keyword is used in a shell script to begin a loop? (Specify one keyword only, without any additional information.)",
+    "question": "Which keyword is used in a shell script to begin a loop?",
     "options": [
       "for",
-      "forloop"
+      "do",
+      "done",
+      "then",
+      "foreach"
     ],
     "answer": [
       "for"
@@ -558,10 +561,13 @@ const QUESTION_BANK = [
   },
   {
     "id": 40,
-    "question": "FILL BLANK When typing a long command line at the shell, what single character can be used to split a command across multiple lines?",
+    "question": "When typing a long command line at the shell, which single character can be used to split the command across multiple lines?",
     "options": [
+      "\\",
       "/",
-      "\\"
+      "|",
+      ";",
+      "-"
     ],
     "answer": [
       "\\"
@@ -785,12 +791,16 @@ const QUESTION_BANK = [
   },
   {
     "id": 56,
-    "question": "FILL BLANK -\nWhat parameter of ls prints a recursive listing of a directory's content? (Specify ONLY the option name without any values or parameters.)",
+    "question": "Which parameter of ls prints a recursive listing of a directory's content?",
     "options": [
-      "The answer is 'ls -R' ;)"
+      "-R",
+      "-r",
+      "-a",
+      "-l",
+      "-d"
     ],
     "answer": [
-      "The answer is 'ls -R' ;)"
+      "-R"
     ]
   },
   {
