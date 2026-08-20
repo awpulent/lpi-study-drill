@@ -10,6 +10,45 @@ network. Everything runs from these files.
 If your browser refuses to keep progress on a `file://` page, run **`serve.cmd`** instead — it
 serves the folder on `http://127.0.0.1:8777` using the Python already on your machine.
 
+## Using it on your phone (GitHub Pages)
+
+The app is fully static, so GitHub Pages serves it with no build step and no Actions workflow.
+
+```bash
+gh repo create lpi-study-drill --public --source=. --remote=origin --push
+gh api -X POST repos/:owner/lpi-study-drill/pages -f "source[branch]=main" -f "source[path]=/"
+```
+
+It goes live at `https://<your-username>.github.io/lpi-study-drill/` about a minute later.
+
+Every path in the app is relative, so it works under a repo subpath without any config. If you
+ever rename the repo, nothing inside needs changing.
+
+### Add to Home Screen
+
+Open the Pages URL on your phone, then:
+
+- **iOS Safari** — Share → *Add to Home Screen*
+- **Android Chrome** — ⋮ menu → *Add to Home screen* / *Install app*
+
+`manifest.json` sets `display: standalone`, so it launches without browser chrome and looks like a
+native app. The keyboard legend hides itself on touch devices, tap targets are sized for thumbs,
+and the layout respects the iOS notch and home indicator.
+
+### Progress is per-device
+
+`localStorage` is scoped to one browser on one device, so your phone and desktop each keep their
+own bank. Drilling on your phone will not shrink the bank on your laptop.
+
+To move a session across, use **Export progress** on one device and **Import progress** on the
+other.
+
+Two storage caveats worth knowing:
+
+- Clearing browser data or using private/incognito mode wipes progress.
+- On iOS, a site kept only in Safari (not added to the Home Screen) can have its storage evicted
+  after about a week of not opening it. Adding it to the Home Screen avoids this.
+
 ## How the drill works
 
 - You get one random question from the bank.
@@ -83,3 +122,5 @@ unmodified.
 | `questions.js` | The question bank |
 | `start.cmd` | Opens the app in your default browser |
 | `serve.cmd` | Fallback: serves on localhost:8777 |
+| `manifest.json` | Add-to-Home-Screen config |
+| `icon-192.png` / `icon-512.png` | App icons |
