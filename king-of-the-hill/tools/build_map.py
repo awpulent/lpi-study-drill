@@ -82,7 +82,7 @@ _ids = [0]
 
 def new_id(prefix="ref"):
     _ids[0] += 1
-    return "%s_%d" % (prefix, _ids[0])
+    return "%032x" % (0xC0FFEE00 + _ids[0])  # Rojo ref ids must be hex strings
 
 
 def inst(cls, name, props=None, attrs=None, children=None, ref_id=None):
@@ -159,7 +159,7 @@ def make_vendor(kind, team, color, fr):
     cid = new_id("counter")
     dark = tuple(int(v * 0.55) for v in color)
     counter = part("Counter", (12, 3.6, 3), (0, 1.8, 0), WOOD, "Wood", fr)
-    counter["id"] = cid
+    counter["attributes"] = {"Rojo_Id": cid}
     kids = [
         counter,
         part("Floor", (16, 0.3, 12), (0, 0.15, 1), (90, 90, 95), "Concrete", fr),
@@ -171,8 +171,9 @@ def make_vendor(kind, team, color, fr):
     sign = part("Sign", (12, 3.4, 0.6), (0, 11.5, -0.5), color, "SmoothPlastic", fr)
     sign["children"] = [sign_gui(label)]
     kids.append(sign)
-    return inst("Model", name, {"PrimaryPart": {"Ref": cid}},
-                {"VendorType": kind, "Team": team}, kids)
+    # PrimaryPart via Rojo 7.7 attribute refs (model.json "id"/Ref does NOT resolve)
+    return inst("Model", name, {},
+                {"VendorType": kind, "Team": team, "Rojo_Target_PrimaryPart": cid}, kids)
 
 
 # ---------------------------------------------------------------- base
@@ -382,7 +383,7 @@ def build():
         for sz in (-1, 1):
             cs.append(part("CenterWall", (t, h, seglen), (sgn * S, h / 2, sz * (door / 2 + seglen / 2)), CONCRETE, "Concrete"))
     cs.append(part("CenterPillar", (6, h, 6), (0, h / 2, 0), (120, 120, 125), "Concrete"))
-    cs.append(part("CenterPlatform", (10, 1, 10), (0, h + 0.5, 0), (200, 170, 60), "Metal"))
+    cs.append(part("CenterDais", (16, 1.5, 16), (0, 0.75, 0), (200, 170, 60), "Metal"))
     # corner posts
     for sx in (-1, 1):
         for sz in (-1, 1):
@@ -427,8 +428,11 @@ def build():
 
     # deliberate features
     features = [
-        ("building", 60, 25), ("building", -55, -40), ("building", -25, 70), ("building", 30, -75),
-        ("ramp", -70, 20), ("ramp", 45, 55),
+        ("building", 85, 0), ("building", 85 * math.cos(math.radians(120)), 85 * math.sin(math.radians(120))),
+        ("building", 85 * math.cos(math.radians(240)), 85 * math.sin(math.radians(240))),
+        ("ramp", 80 * math.cos(math.radians(60)), 80 * math.sin(math.radians(60))),
+        ("ramp", -80, 0),
+        ("ramp", 80 * math.cos(math.radians(300)), 80 * math.sin(math.radians(300))),
     ]
     for kind, fx, fz in features:
         if kind == "building":
@@ -438,10 +442,6 @@ def build():
         else:
             if free(fx, fz, 10):
                 ramp(fx, fz, yaw_facing(-fx, -fz))
-    # ramps flanking the central structure so the platform is reachable? (put ramp to bunker roof)
-    cover.append(part("CenterRamp", (10, 9.5, 20), (0, 4.75, 26), (170, 150, 110), "Concrete",
-                      rot=rot_y(math.pi), cls="WedgePart"))  # high edge toward -Z (center)
-
     # random crates, walls in CZ
     tries = 0
     count = {"crate": 0, "wall": 0}
@@ -480,7 +480,7 @@ def build():
 
     children.append(inst("Folder", "Cover", {}, None, cover))
 
-    root = inst("Model", "Map", {}, None, children)
+    root = {"className": "Model", "properties": {}, "children": children}  # name comes from project file
     return root
 
 

@@ -1,5 +1,4 @@
 {
- "name": "Map",
  "className": "Model",
  "properties": {},
  "children": [
@@ -676,14 +675,11 @@
       {
        "name": "GearVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_1"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Gear",
-        "Team": "Yellow"
+        "Team": "Yellow",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee01"
        },
        "children": [
         {
@@ -719,7 +715,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_1"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee01"
+         }
         },
         {
          "name": "Floor",
@@ -971,14 +969,11 @@
       {
        "name": "VehicleVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_2"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Vehicle",
-        "Team": "Yellow"
+        "Team": "Yellow",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee02"
        },
        "children": [
         {
@@ -1014,7 +1009,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_2"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee02"
+         }
         },
         {
          "name": "Floor",
@@ -2324,14 +2321,11 @@
       {
        "name": "GearVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_3"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Gear",
-        "Team": "Red"
+        "Team": "Red",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee03"
        },
        "children": [
         {
@@ -2367,7 +2361,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_3"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee03"
+         }
         },
         {
          "name": "Floor",
@@ -2619,14 +2615,11 @@
       {
        "name": "VehicleVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_4"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Vehicle",
-        "Team": "Red"
+        "Team": "Red",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee04"
        },
        "children": [
         {
@@ -2662,7 +2655,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_4"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee04"
+         }
         },
         {
          "name": "Floor",
@@ -3972,14 +3967,11 @@
       {
        "name": "GearVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_5"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Gear",
-        "Team": "Blue"
+        "Team": "Blue",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee05"
        },
        "children": [
         {
@@ -4015,7 +4007,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_5"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee05"
+         }
         },
         {
          "name": "Floor",
@@ -4267,14 +4261,11 @@
       {
        "name": "VehicleVendor",
        "className": "Model",
-       "properties": {
-        "PrimaryPart": {
-         "Ref": "counter_6"
-        }
-       },
+       "properties": {},
        "attributes": {
         "VendorType": "Vehicle",
-        "Team": "Blue"
+        "Team": "Blue",
+        "Rojo_Target_PrimaryPart": "000000000000000000000000c0ffee06"
        },
        "children": [
         {
@@ -4310,7 +4301,9 @@
           "TopSurface": "Smooth",
           "BottomSurface": "Smooth"
          },
-         "id": "counter_6"
+         "attributes": {
+          "Rojo_Id": "000000000000000000000000c0ffee06"
+         }
         },
         {
          "name": "Floor",
@@ -10233,17 +10226,17 @@
      }
     },
     {
-     "name": "CenterPlatform",
+     "name": "CenterDais",
      "className": "Part",
      "properties": {
       "Size": [
-       10,
-       1,
-       10
+       16,
+       1.5,
+       16
       ],
       "CFrame": [
        0.0,
-       9.5,
+       0.75,
        0.0,
        1,
        0.0,
@@ -10403,27 +10396,639 @@
      }
     },
     {
-     "name": "CenterRamp",
-     "className": "WedgePart",
+     "name": "BldgBack",
+     "className": "Part",
      "properties": {
       "Size": [
-       10,
-       9.5,
-       20
+       22,
+       8,
+       1.5
       ],
       "CFrame": [
-       0.0,
-       4.75,
-       26.0,
-       -1.0,
+       93.0,
+       4.0,
        0.0,
        0.0,
+       0.0,
+       1.0,
        0.0,
        1,
        0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgLeft",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       85.0,
+       4.0,
+       11.0,
        0.0,
        0.0,
-       -1.0
+       1.0,
+       0.0,
+       1,
+       0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRight",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       85.0,
+       4.0,
+       -11.0,
+       0.0,
+       0.0,
+       1.0,
+       0.0,
+       1,
+       0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontL",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       77.0,
+       4.0,
+       7.25,
+       0.0,
+       0.0,
+       1.0,
+       0.0,
+       1,
+       0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontR",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       77.0,
+       4.0,
+       -7.25,
+       0.0,
+       0.0,
+       1.0,
+       0.0,
+       1,
+       0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRoof",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       22,
+       1,
+       16
+      ],
+      "CFrame": [
+       85.0,
+       8.5,
+       0.0,
+       0.0,
+       0.0,
+       1.0,
+       0.0,
+       1,
+       0.0,
+       -1.0,
+       0.0,
+       0.0
+      ],
+      "Color": [
+       0.3529,
+       0.3137,
+       0.2941
+      ],
+      "Material": "Slate",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgBack",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       22,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -46.5,
+       4.0,
+       80.54036,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgLeft",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       -52.02628,
+       4.0,
+       68.11216,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRight",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       -32.97372,
+       4.0,
+       79.11216,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontL",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -44.77868,
+       4.0,
+       63.05896,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontR",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -32.22132,
+       4.0,
+       70.30896,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRoof",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       22,
+       1,
+       16
+      ],
+      "CFrame": [
+       -42.5,
+       8.5,
+       73.61216,
+       0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       0.86603
+      ],
+      "Color": [
+       0.3529,
+       0.3137,
+       0.2941
+      ],
+      "Material": "Slate",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgBack",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       22,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -46.5,
+       4.0,
+       -80.54036,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgLeft",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       -32.97372,
+       4.0,
+       -79.11216,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRight",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       1.5,
+       8,
+       16
+      ],
+      "CFrame": [
+       -52.02628,
+       4.0,
+       -68.11216,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontL",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -32.22132,
+       4.0,
+       -70.30896,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgFrontR",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7.5,
+       8,
+       1.5
+      ],
+      "CFrame": [
+       -44.77868,
+       4.0,
+       -63.05896,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.5294,
+       0.4706,
+       0.4118
+      ],
+      "Material": "Brick",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "BldgRoof",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       22,
+       1,
+       16
+      ],
+      "CFrame": [
+       -42.5,
+       8.5,
+       -73.61216,
+       -0.86603,
+       0.0,
+       -0.5,
+       0.0,
+       1,
+       0.0,
+       0.5,
+       0.0,
+       -0.86603
+      ],
+      "Color": [
+       0.3529,
+       0.3137,
+       0.2941
+      ],
+      "Material": "Slate",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Ramp",
+     "className": "WedgePart",
+     "properties": {
+      "Size": [
+       12,
+       6,
+       18
+      ],
+      "CFrame": [
+       40.0,
+       3.0,
+       69.28203,
+       0.86603,
+       0.0,
+       0.5,
+       0.0,
+       1,
+       0.0,
+       -0.5,
+       0.0,
+       0.86603
       ],
       "Color": [
        0.6667,
@@ -10437,32 +11042,32 @@
      }
     },
     {
-     "name": "CoverWall",
-     "className": "Part",
+     "name": "Ramp",
+     "className": "WedgePart",
      "properties": {
       "Size": [
-       14,
+       12,
        6,
-       2
+       18
       ],
       "CFrame": [
-       41.80215,
+       -80.0,
        3.0,
-       71.38534,
-       0.57835,
        0.0,
-       0.81579,
+       0.0,
+       0.0,
+       -1.0,
        0.0,
        1,
        0.0,
-       -0.81579,
+       1.0,
        0.0,
-       0.57835
+       0.0
       ],
       "Color": [
+       0.6667,
        0.5882,
-       0.5882,
-       0.5882
+       0.4314
       ],
       "Material": "Concrete",
       "Anchored": true,
@@ -10471,102 +11076,34 @@
      }
     },
     {
-     "name": "Crate",
-     "className": "Part",
+     "name": "Ramp",
+     "className": "WedgePart",
      "properties": {
       "Size": [
+       12,
        6,
-       6,
-       6
+       18
       ],
       "CFrame": [
-       -51.48331,
+       40.0,
        3.0,
-       72.66757,
-       -0.49204,
+       -69.28203,
+       -0.86603,
        0.0,
-       0.87057,
-       0.0,
-       1,
-       0.0,
-       -0.87057,
-       0.0,
-       -0.49204
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       7,
-       7,
-       7
-      ],
-      "CFrame": [
-       28.90701,
-       3.5,
-       -97.84363,
-       -0.3192,
-       0.0,
-       0.94769,
+       0.5,
        0.0,
        1,
        0.0,
-       -0.94769,
+       -0.5,
        0.0,
-       -0.3192
+       -0.86603
       ],
       "Color": [
-       0.5451,
-       0.3922,
-       0.2353
+       0.6667,
+       0.5882,
+       0.4314
       ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4,
-       4,
-       4
-      ],
-      "CFrame": [
-       15.09733,
-       2.0,
-       -101.48011,
-       -0.5241,
-       0.0,
-       0.85166,
-       0.0,
-       1,
-       0.0,
-       -0.85166,
-       0.0,
-       -0.5241
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
+      "Material": "Concrete",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
@@ -10607,27 +11144,61 @@
      }
     },
     {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       6,
+       6,
+       6
+      ],
+      "CFrame": [
+       33.60431,
+       3.0,
+       -93.35973,
+       -0.67232,
+       0.0,
+       0.74026,
+       0.0,
+       1,
+       0.0,
+       -0.74026,
+       0.0,
+       -0.67232
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
      "name": "CoverWall",
      "className": "Part",
      "properties": {
       "Size": [
-       18,
+       14,
        6,
        2
       ],
       "CFrame": [
-       51.00369,
+       34.05504,
        3.0,
-       -88.09454,
-       0.02917,
+       89.04877,
+       0.99976,
        0.0,
-       0.99957,
+       0.02181,
        0.0,
        1,
        0.0,
-       -0.99957,
+       -0.02181,
        0.0,
-       0.02917
+       0.99976
       ],
       "Color": [
        0.5882,
@@ -10635,108 +11206,6 @@
        0.5882
       ],
       "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       -53.71709,
-       2.5,
-       -68.13455,
-       0.05004,
-       0.0,
-       0.99875,
-       0.0,
-       1,
-       0.0,
-       -0.99875,
-       0.0,
-       0.05004
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       3.5,
-       3.5,
-       3.5
-      ],
-      "CFrame": [
-       -53.60392,
-       6.75,
-       -68.13455,
-       -0.34284,
-       0.0,
-       0.93939,
-       0.0,
-       1,
-       0.0,
-       -0.93939,
-       0.0,
-       -0.34284
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       7,
-       7,
-       7
-      ],
-      "CFrame": [
-       -38.72667,
-       3.5,
-       80.10277,
-       0.57001,
-       0.0,
-       0.82164,
-       0.0,
-       1,
-       0.0,
-       -0.82164,
-       0.0,
-       0.57001
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
@@ -10786,18 +11255,18 @@
        2
       ],
       "CFrame": [
-       -64.05769,
+       56.77337,
        3.0,
-       3.36683,
-       0.576,
+       -83.38784,
+       0.79743,
        0.0,
-       0.81745,
+       0.60341,
        0.0,
        1,
        0.0,
-       -0.81745,
+       -0.60341,
        0.0,
-       0.576
+       0.79743
       ],
       "Color": [
        0.5882,
@@ -10815,23 +11284,23 @@
      "className": "Part",
      "properties": {
       "Size": [
-       4,
-       4,
-       4
+       7,
+       7,
+       7
       ],
       "CFrame": [
-       -51.14909,
-       2.0,
-       -82.12352,
-       1.0,
+       -67.0338,
+       3.5,
+       67.80745,
+       0.85472,
        0.0,
-       0.00048,
+       0.51909,
        0.0,
        1,
        0.0,
-       -0.00048,
+       -0.51909,
        0.0,
-       1.0
+       0.85472
       ],
       "Color": [
        0.5451,
@@ -10839,74 +11308,6 @@
        0.2353
       ],
       "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       10,
-       6,
-       2
-      ],
-      "CFrame": [
-       -101.08809,
-       3.0,
-       -14.10126,
-       0.99047,
-       0.0,
-       0.13773,
-       0.0,
-       1,
-       0.0,
-       -0.13773,
-       0.0,
-       0.99047
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       10,
-       6,
-       2
-      ],
-      "CFrame": [
-       86.86658,
-       3.0,
-       7.05105,
-       0.99181,
-       0.0,
-       0.12772,
-       0.0,
-       1,
-       0.0,
-       -0.12772,
-       0.0,
-       0.99181
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
@@ -10922,18 +11323,18 @@
        5
       ],
       "CFrame": [
-       102.55365,
+       -31.67205,
        2.5,
-       16.05458,
-       0.94761,
+       44.75338,
+       -0.01343,
        0.0,
-       0.31943,
+       0.99991,
        0.0,
        1,
        0.0,
-       -0.31943,
+       -0.99991,
        0.0,
-       0.94761
+       -0.01343
       ],
       "Color": [
        0.5451,
@@ -10941,210 +11342,6 @@
        0.2353
       ],
       "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       10,
-       6,
-       2
-      ],
-      "CFrame": [
-       -82.28783,
-       3.0,
-       14.46126,
-       0.71151,
-       0.0,
-       0.70267,
-       0.0,
-       1,
-       0.0,
-       -0.70267,
-       0.0,
-       0.71151
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4,
-       4,
-       4
-      ],
-      "CFrame": [
-       -28.00774,
-       2.0,
-       -95.23195,
-       0.98478,
-       0.0,
-       0.17381,
-       0.0,
-       1,
-       0.0,
-       -0.17381,
-       0.0,
-       0.98478
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       2.8,
-       2.8,
-       2.8
-      ],
-      "CFrame": [
-       -27.72035,
-       5.4,
-       -95.23195,
-       0.83936,
-       0.0,
-       0.54358,
-       0.0,
-       1,
-       0.0,
-       -0.54358,
-       0.0,
-       0.83936
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       -35.54741,
-       3.0,
-       19.40623,
-       -0.11274,
-       0.0,
-       0.99362,
-       0.0,
-       1,
-       0.0,
-       -0.99362,
-       0.0,
-       -0.11274
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4.2,
-       4.2,
-       4.2
-      ],
-      "CFrame": [
-       -36.01287,
-       8.1,
-       19.40623,
-       -0.49077,
-       0.0,
-       0.87129,
-       0.0,
-       1,
-       0.0,
-       -0.87129,
-       0.0,
-       -0.49077
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       14,
-       6,
-       2
-      ],
-      "CFrame": [
-       32.68742,
-       3.0,
-       -57.01435,
-       0.80757,
-       0.0,
-       -0.58977,
-       0.0,
-       1,
-       0.0,
-       0.58977,
-       0.0,
-       0.80757
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
@@ -11194,18 +11391,18 @@
        6
       ],
       "CFrame": [
-       -88.89758,
+       60.93751,
        3.0,
-       -9.9022,
-       0.69375,
+       72.55533,
+       -0.19426,
        0.0,
-       0.72021,
+       0.98095,
        0.0,
        1,
        0.0,
-       -0.72021,
+       -0.98095,
        0.0,
-       0.69375
+       -0.19426
       ],
       "Color": [
        0.5451,
@@ -11219,61 +11416,27 @@
      }
     },
     {
-     "name": "CoverWall",
+     "name": "Crate",
      "className": "Part",
      "properties": {
       "Size": [
-       10,
        6,
-       2
+       6,
+       6
       ],
       "CFrame": [
-       71.91782,
+       -95.44609,
        3.0,
-       -0.68056,
-       0.98958,
+       -13.25651,
+       -0.86436,
        0.0,
-       -0.14397,
-       0.0,
-       1,
-       0.0,
-       0.14397,
-       0.0,
-       0.98958
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       7,
-       7,
-       7
-      ],
-      "CFrame": [
-       40.15989,
-       3.5,
-       88.6666,
-       -0.89296,
-       0.0,
-       0.45013,
+       0.50287,
        0.0,
        1,
        0.0,
-       -0.45013,
+       -0.50287,
        0.0,
-       -0.89296
+       -0.86436
       ],
       "Color": [
        0.5451,
@@ -11291,164 +11454,28 @@
      "className": "Part",
      "properties": {
       "Size": [
-       5,
-       5,
-       5
+       4.2,
+       4.2,
+       4.2
       ],
       "CFrame": [
-       -99.69968,
-       2.5,
-       27.53827,
-       -0.04429,
+       -95.81373,
+       8.1,
+       -13.25651,
+       -0.99196,
        0.0,
-       0.99902,
+       0.12657,
        0.0,
        1,
        0.0,
-       -0.99902,
+       -0.12657,
        0.0,
-       -0.04429
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       3.5,
-       3.5,
-       3.5
-      ],
-      "CFrame": [
-       -99.83218,
-       6.75,
-       27.53827,
-       -0.42983,
-       0.0,
-       0.90291,
-       0.0,
-       1,
-       0.0,
-       -0.90291,
-       0.0,
-       -0.42983
+       -0.99196
       ],
       "Color": [
        0.5882,
        0.4314,
        0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       -99.86901,
-       2.5,
-       12.87405,
-       -0.99574,
-       0.0,
-       0.09215,
-       0.0,
-       1,
-       0.0,
-       -0.09215,
-       0.0,
-       -0.99574
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       3.5,
-       3.5,
-       3.5
-      ],
-      "CFrame": [
-       -100.112,
-       6.75,
-       12.87405,
-       -0.95303,
-       0.0,
-       -0.30288,
-       0.0,
-       1,
-       0.0,
-       0.30288,
-       0.0,
-       -0.95303
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4,
-       4,
-       4
-      ],
-      "CFrame": [
-       -38.15405,
-       2.0,
-       -76.3711,
-       -0.9377,
-       0.0,
-       0.34744,
-       0.0,
-       1,
-       0.0,
-       -0.34744,
-       0.0,
-       -0.9377
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
       ],
       "Material": "WoodPlanks",
       "Anchored": true,
@@ -11529,23 +11556,23 @@
      "className": "Part",
      "properties": {
       "Size": [
-       4,
-       4,
-       4
+       6,
+       6,
+       6
       ],
       "CFrame": [
-       67.70592,
-       2.0,
-       -78.85899,
-       0.53615,
+       7.59539,
+       3.0,
+       -103.4631,
+       0.9658,
        0.0,
-       0.84413,
+       0.25927,
        0.0,
        1,
        0.0,
-       -0.84413,
+       -0.25927,
        0.0,
-       0.53615
+       0.9658
       ],
       "Color": [
        0.5451,
@@ -11563,28 +11590,28 @@
      "className": "Part",
      "properties": {
       "Size": [
-       5,
-       5,
-       5
+       4.2,
+       4.2,
+       4.2
       ],
       "CFrame": [
-       93.21544,
-       2.5,
-       -6.43331,
-       0.96829,
+       7.24361,
+       8.1,
+       -103.4631,
+       0.7886,
        0.0,
-       0.24984,
+       0.61491,
        0.0,
        1,
        0.0,
-       -0.24984,
+       -0.61491,
        0.0,
-       0.96829
+       0.7886
       ],
       "Color": [
-       0.5451,
-       0.3922,
-       0.2353
+       0.5882,
+       0.4314,
+       0.2745
       ],
       "Material": "WoodPlanks",
       "Anchored": true,
@@ -11593,34 +11620,34 @@
      }
     },
     {
-     "name": "Crate",
+     "name": "CoverWall",
      "className": "Part",
      "properties": {
       "Size": [
-       4,
-       4,
-       4
+       18,
+       6,
+       2
       ],
       "CFrame": [
-       70.96254,
-       2.0,
-       71.28398,
-       0.20618,
+       102.59306,
+       3.0,
+       17.04612,
+       0.70558,
        0.0,
-       0.97851,
+       0.70863,
        0.0,
        1,
        0.0,
-       -0.97851,
+       -0.70863,
        0.0,
-       0.20618
+       0.70558
       ],
       "Color": [
-       0.5451,
-       0.3922,
-       0.2353
+       0.5882,
+       0.5882,
+       0.5882
       ],
-      "Material": "WoodPlanks",
+      "Material": "Concrete",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
@@ -11636,18 +11663,18 @@
        2
       ],
       "CFrame": [
-       32.4944,
+       -34.7473,
        3.0,
-       59.94733,
-       0.83022,
+       -96.22936,
+       0.56642,
        0.0,
-       0.55743,
+       -0.82411,
        0.0,
        1,
        0.0,
-       -0.55743,
+       0.82411,
        0.0,
-       0.83022
+       0.56642
       ],
       "Color": [
        0.5882,
@@ -11704,18 +11731,18 @@
        2
       ],
       "CFrame": [
-       47.36958,
+       54.58214,
        3.0,
-       -71.88777,
-       -0.17316,
+       5.41632,
+       0.99999,
        0.0,
-       0.98489,
+       0.0032,
        0.0,
        1,
        0.0,
-       -0.98489,
+       -0.0032,
        0.0,
-       -0.17316
+       0.99999
       ],
       "Color": [
        0.5882,
@@ -11729,197 +11756,129 @@
      }
     },
     {
-     "name": "CoverWall",
+     "name": "Crate",
      "className": "Part",
      "properties": {
       "Size": [
-       14,
-       6,
-       2
+       5,
+       5,
+       5
       ],
       "CFrame": [
-       -65.55224,
-       3.0,
-       71.696,
-       0.99675,
+       56.43975,
+       2.5,
+       -69.21049,
+       -0.95354,
        0.0,
-       0.08058,
+       0.30127,
        0.0,
        1,
        0.0,
-       -0.08058,
+       -0.30127,
        0.0,
-       0.99675
+       -0.95354
       ],
       "Color": [
-       0.5882,
-       0.5882,
-       0.5882
+       0.5451,
+       0.3922,
+       0.2353
       ],
-      "Material": "Concrete",
+      "Material": "WoodPlanks",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
      }
     },
     {
-     "name": "CoverWall",
+     "name": "Crate",
      "className": "Part",
      "properties": {
       "Size": [
-       10,
-       6,
-       2
+       3.5,
+       3.5,
+       3.5
+      ],
+      "CFrame": [
+       56.82713,
+       6.75,
+       -69.21049,
+       -0.99559,
+       0.0,
+       -0.09384,
+       0.0,
+       1,
+       0.0,
+       0.09384,
+       0.0,
+       -0.99559
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4,
+       4,
+       4
+      ],
+      "CFrame": [
+       99.47866,
+       2.0,
+       -20.37774,
+       0.83523,
+       0.0,
+       0.54991,
+       0.0,
+       1,
+       0.0,
+       -0.54991,
+       0.0,
+       0.83523
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       5,
+       5,
+       5
       ],
       "CFrame": [
        97.81263,
-       3.0,
+       2.5,
        34.02491,
-       0.57614,
+       0.02569,
        0.0,
-       0.81735,
-       0.0,
-       1,
-       0.0,
-       -0.81735,
-       0.0,
-       0.57614
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       216.94197,
-       2.5,
-       -41.65616,
-       0.95295,
-       0.0,
-       0.30312,
+       0.99967,
        0.0,
        1,
        0.0,
-       -0.30312,
+       -0.99967,
        0.0,
-       0.95295
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       -221.40214,
-       3.0,
-       -15.07908,
-       -0.10805,
-       0.0,
-       0.99415,
-       0.0,
-       1,
-       0.0,
-       -0.99415,
-       0.0,
-       -0.10805
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       -125.56477,
-       3.0,
-       29.31406,
-       0.47154,
-       0.0,
-       0.88185,
-       0.0,
-       1,
-       0.0,
-       -0.88185,
-       0.0,
-       0.47154
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4,
-       4,
-       4
-      ],
-      "CFrame": [
-       -270.39539,
-       2.0,
-       -0.47992,
-       -0.54392,
-       0.0,
-       0.83914,
-       0.0,
-       1,
-       0.0,
-       -0.83914,
-       0.0,
-       -0.54392
+       0.02569
       ],
       "Color": [
        0.5451,
@@ -11942,698 +11901,18 @@
        4
       ],
       "CFrame": [
-       -86.18288,
+       56.57024,
        2.0,
-       118.87067,
-       0.67468,
+       85.88533,
+       0.24226,
        0.0,
-       0.73811,
-       0.0,
-       1,
-       0.0,
-       -0.73811,
-       0.0,
-       0.67468
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       147.5703,
-       3.0,
-       63.73779,
-       0.9521,
-       0.0,
-       0.30579,
+       0.97021,
        0.0,
        1,
        0.0,
-       -0.30579,
+       -0.97021,
        0.0,
-       0.9521
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       17.22251,
-       3.0,
-       -173.1834,
-       -0.66897,
-       0.0,
-       0.74329,
-       0.0,
-       1,
-       0.0,
-       -0.74329,
-       0.0,
-       -0.66897
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       55.00645,
-       3.0,
-       -271.2979,
-       -0.41575,
-       0.0,
-       0.90948,
-       0.0,
-       1,
-       0.0,
-       -0.90948,
-       0.0,
-       -0.41575
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       10.79115,
-       2.5,
-       -136.43944,
-       -0.49497,
-       0.0,
-       0.86891,
-       0.0,
-       1,
-       0.0,
-       -0.86891,
-       0.0,
-       -0.49497
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       12,
-       6,
-       2
-      ],
-      "CFrame": [
-       77.24194,
-       3.0,
-       -282.46858,
-       -0.05382,
-       0.0,
-       0.99855,
-       0.0,
-       1,
-       0.0,
-       -0.99855,
-       0.0,
-       -0.05382
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       191.3256,
-       3.0,
-       -177.34116,
-       0.16775,
-       0.0,
-       0.98583,
-       0.0,
-       1,
-       0.0,
-       -0.98583,
-       0.0,
-       0.16775
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       65.01922,
-       2.5,
-       -133.66782,
-       0.55534,
-       0.0,
-       0.83162,
-       0.0,
-       1,
-       0.0,
-       -0.83162,
-       0.0,
-       0.55534
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       3.5,
-       3.5,
-       3.5
-      ],
-      "CFrame": [
-       64.68636,
-       6.75,
-       -133.66782,
-       0.18766,
-       0.0,
-       0.98223,
-       0.0,
-       1,
-       0.0,
-       -0.98223,
-       0.0,
-       0.18766
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       -137.59757,
-       3.0,
-       -177.3752,
-       -0.13022,
-       0.0,
-       0.99149,
-       0.0,
-       1,
-       0.0,
-       -0.99149,
-       0.0,
-       -0.13022
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       -162.90039,
-       3.0,
-       90.25991,
-       0.99994,
-       0.0,
-       0.01066,
-       0.0,
-       1,
-       0.0,
-       -0.01066,
-       0.0,
-       0.99994
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       291.65356,
-       3.0,
-       -36.37114,
-       -0.99886,
-       0.0,
-       0.0477,
-       0.0,
-       1,
-       0.0,
-       -0.0477,
-       0.0,
-       -0.99886
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "CoverWall",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       16,
-       6,
-       2
-      ],
-      "CFrame": [
-       -183.19323,
-       3.0,
-       159.3132,
-       -0.98465,
-       0.0,
-       0.17455,
-       0.0,
-       1,
-       0.0,
-       -0.17455,
-       0.0,
-       -0.98465
-      ],
-      "Color": [
-       0.5882,
-       0.5882,
-       0.5882
-      ],
-      "Material": "Concrete",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       5,
-       5,
-       5
-      ],
-      "CFrame": [
-       76.06597,
-       2.5,
-       -181.45151,
-       -0.37049,
-       0.0,
-       0.92884,
-       0.0,
-       1,
-       0.0,
-       -0.92884,
-       0.0,
-       -0.37049
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       3.5,
-       3.5,
-       3.5
-      ],
-      "CFrame": [
-       75.81661,
-       6.75,
-       -181.45151,
-       -0.70295,
-       0.0,
-       0.71124,
-       0.0,
-       1,
-       0.0,
-       -0.71124,
-       0.0,
-       -0.70295
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       281.54991,
-       3.0,
-       50.46676,
-       -0.84868,
-       0.0,
-       0.52891,
-       0.0,
-       1,
-       0.0,
-       -0.52891,
-       0.0,
-       -0.84868
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4.2,
-       4.2,
-       4.2
-      ],
-      "CFrame": [
-       281.63645,
-       8.1,
-       50.46676,
-       -0.98765,
-       0.0,
-       0.15667,
-       0.0,
-       1,
-       0.0,
-       -0.15667,
-       0.0,
-       -0.98765
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       6,
-       6,
-       6
-      ],
-      "CFrame": [
-       109.7341,
-       3.0,
-       263.46087,
-       0.67319,
-       0.0,
-       0.73947,
-       0.0,
-       1,
-       0.0,
-       -0.73947,
-       0.0,
-       0.67319
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4.2,
-       4.2,
-       4.2
-      ],
-      "CFrame": [
-       109.91787,
-       8.1,
-       263.46087,
-       0.33209,
-       0.0,
-       0.94325,
-       0.0,
-       1,
-       0.0,
-       -0.94325,
-       0.0,
-       0.33209
-      ],
-      "Color": [
-       0.5882,
-       0.4314,
-       0.2745
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       7,
-       7,
-       7
-      ],
-      "CFrame": [
-       -220.41325,
-       3.5,
-       120.89616,
-       0.99995,
-       0.0,
-       0.00969,
-       0.0,
-       1,
-       0.0,
-       -0.00969,
-       0.0,
-       0.99995
-      ],
-      "Color": [
-       0.5451,
-       0.3922,
-       0.2353
-      ],
-      "Material": "WoodPlanks",
-      "Anchored": true,
-      "TopSurface": "Smooth",
-      "BottomSurface": "Smooth"
-     }
-    },
-    {
-     "name": "Crate",
-     "className": "Part",
-     "properties": {
-      "Size": [
-       4,
-       4,
-       4
-      ],
-      "CFrame": [
-       125.15742,
-       2.0,
-       87.63029,
-       0.07966,
-       0.0,
-       0.99682,
-       0.0,
-       1,
-       0.0,
-       -0.99682,
-       0.0,
-       0.07966
+       0.24226
       ],
       "Color": [
        0.5451,
@@ -12656,18 +11935,18 @@
        2.8
       ],
       "CFrame": [
-       125.34364,
+       56.45708,
        5.4,
-       87.63029,
-       -0.31481,
+       85.88533,
+       -0.15469,
        0.0,
-       0.94916,
+       0.98796,
        0.0,
        1,
        0.0,
-       -0.94916,
+       -0.98796,
        0.0,
-       -0.31481
+       -0.15469
       ],
       "Color": [
        0.5882,
@@ -12685,23 +11964,91 @@
      "className": "Part",
      "properties": {
       "Size": [
-       12,
+       10,
        6,
        2
       ],
       "CFrame": [
-       272.68045,
+       32.0801,
        3.0,
-       159.49831,
-       0.41082,
+       29.6997,
+       0.75231,
        0.0,
-       0.91171,
+       0.65881,
        0.0,
        1,
        0.0,
-       -0.91171,
+       -0.65881,
        0.0,
-       0.41082
+       0.75231
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       6,
+       6,
+       6
+      ],
+      "CFrame": [
+       30.52496,
+       3.0,
+       -55.39601,
+       -0.79698,
+       0.0,
+       0.604,
+       0.0,
+       1,
+       0.0,
+       -0.604,
+       0.0,
+       -0.79698
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       -30.70199,
+       3.0,
+       -54.48095,
+       0.74981,
+       0.0,
+       -0.66166,
+       0.0,
+       1,
+       0.0,
+       0.66166,
+       0.0,
+       0.74981
       ],
       "Color": [
        0.5882,
@@ -12724,18 +12071,392 @@
        5
       ],
       "CFrame": [
-       -224.6343,
+       -18.89565,
        2.5,
-       72.88205,
-       0.74808,
+       -47.75688,
+       0.21109,
        0.0,
-       0.66361,
+       0.97747,
        0.0,
        1,
        0.0,
-       -0.66361,
+       -0.97747,
        0.0,
-       0.74808
+       0.21109
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       22.80948,
+       3.5,
+       -100.04178,
+       0.86831,
+       0.0,
+       0.49602,
+       0.0,
+       1,
+       0.0,
+       -0.49602,
+       0.0,
+       0.86831
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       6,
+       6,
+       6
+      ],
+      "CFrame": [
+       91.77691,
+       3.0,
+       43.97595,
+       0.52751,
+       0.0,
+       0.84955,
+       0.0,
+       1,
+       0.0,
+       -0.84955,
+       0.0,
+       0.52751
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       6,
+       6,
+       6
+      ],
+      "CFrame": [
+       -79.78531,
+       3.0,
+       65.96524,
+       0.17702,
+       0.0,
+       0.98421,
+       0.0,
+       1,
+       0.0,
+       -0.98421,
+       0.0,
+       0.17702
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       5,
+       5,
+       5
+      ],
+      "CFrame": [
+       33.51157,
+       2.5,
+       53.05748,
+       -0.49121,
+       0.0,
+       0.87104,
+       0.0,
+       1,
+       0.0,
+       -0.87104,
+       0.0,
+       -0.49121
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       6,
+       6,
+       6
+      ],
+      "CFrame": [
+       -98.60508,
+       3.0,
+       11.69685,
+       -0.06326,
+       0.0,
+       0.998,
+       0.0,
+       1,
+       0.0,
+       -0.998,
+       0.0,
+       -0.06326
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       -31.99987,
+       3.0,
+       94.71391,
+       0.82827,
+       0.0,
+       0.56033,
+       0.0,
+       1,
+       0.0,
+       -0.56033,
+       0.0,
+       0.82827
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       34.94834,
+       3.0,
+       17.7632,
+       0.19409,
+       0.0,
+       0.98098,
+       0.0,
+       1,
+       0.0,
+       -0.98098,
+       0.0,
+       0.19409
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       -64.66833,
+       3.0,
+       5.18034,
+       0.65706,
+       0.0,
+       0.75384,
+       0.0,
+       1,
+       0.0,
+       -0.75384,
+       0.0,
+       0.65706
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       -90.23602,
+       3.0,
+       23.44313,
+       0.99411,
+       0.0,
+       0.10836,
+       0.0,
+       1,
+       0.0,
+       -0.10836,
+       0.0,
+       0.99411
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       10,
+       6,
+       2
+      ],
+      "CFrame": [
+       48.0575,
+       3.0,
+       92.04554,
+       0.82201,
+       0.0,
+       -0.56948,
+       0.0,
+       1,
+       0.0,
+       0.56948,
+       0.0,
+       0.82201
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       45.09536,
+       3.5,
+       -189.4769,
+       -0.68909,
+       0.0,
+       0.72468,
+       0.0,
+       1,
+       0.0,
+       -0.72468,
+       0.0,
+       -0.68909
       ],
       "Color": [
        0.5451,
@@ -12758,18 +12479,18 @@
        4
       ],
       "CFrame": [
-       306.32126,
+       -230.40688,
        2.0,
-       -48.4636,
-       0.98456,
+       -76.81366,
+       -0.25898,
        0.0,
-       0.17505,
+       0.96588,
        0.0,
        1,
        0.0,
-       -0.17505,
+       -0.96588,
        0.0,
-       0.98456
+       -0.25898
       ],
       "Color": [
        0.5451,
@@ -12792,18 +12513,494 @@
        2
       ],
       "CFrame": [
-       166.64652,
+       84.5356,
        3.0,
-       -190.60989,
-       -0.48045,
+       109.21874,
+       0.90719,
        0.0,
-       0.87702,
+       0.42072,
        0.0,
        1,
        0.0,
-       -0.87702,
+       -0.42072,
        0.0,
-       -0.48045
+       0.90719
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       27.49531,
+       3.5,
+       -236.58534,
+       0.26198,
+       0.0,
+       0.96507,
+       0.0,
+       1,
+       0.0,
+       -0.96507,
+       0.0,
+       0.26198
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       12,
+       6,
+       2
+      ],
+      "CFrame": [
+       -286.93186,
+       3.0,
+       30.19653,
+       -0.69353,
+       0.0,
+       0.72043,
+       0.0,
+       1,
+       0.0,
+       -0.72043,
+       0.0,
+       -0.69353
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       12,
+       6,
+       2
+      ],
+      "CFrame": [
+       -152.18353,
+       3.0,
+       23.01022,
+       0.36648,
+       0.0,
+       0.93043,
+       0.0,
+       1,
+       0.0,
+       -0.93043,
+       0.0,
+       0.36648
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       5,
+       5,
+       5
+      ],
+      "CFrame": [
+       -245.79693,
+       2.5,
+       147.67461,
+       -0.10659,
+       0.0,
+       0.9943,
+       0.0,
+       1,
+       0.0,
+       -0.9943,
+       0.0,
+       -0.10659
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       3.5,
+       3.5,
+       3.5
+      ],
+      "CFrame": [
+       -246.0676,
+       6.75,
+       147.67461,
+       -0.48538,
+       0.0,
+       0.8743,
+       0.0,
+       1,
+       0.0,
+       -0.8743,
+       0.0,
+       -0.48538
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       280.07903,
+       3.0,
+       44.09785,
+       -0.25442,
+       0.0,
+       0.96709,
+       0.0,
+       1,
+       0.0,
+       -0.96709,
+       0.0,
+       -0.25442
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       139.43905,
+       3.5,
+       -3.60202,
+       -0.99005,
+       0.0,
+       0.14075,
+       0.0,
+       1,
+       0.0,
+       -0.14075,
+       0.0,
+       -0.99005
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       5,
+       5,
+       5
+      ],
+      "CFrame": [
+       -124.61549,
+       2.5,
+       -194.50641,
+       0.40929,
+       0.0,
+       0.91241,
+       0.0,
+       1,
+       0.0,
+       -0.91241,
+       0.0,
+       0.40929
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       3.5,
+       3.5,
+       3.5
+      ],
+      "CFrame": [
+       -124.39458,
+       6.75,
+       -194.50641,
+       0.02167,
+       0.0,
+       0.99977,
+       0.0,
+       1,
+       0.0,
+       -0.99977,
+       0.0,
+       0.02167
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       258.4503,
+       3.5,
+       -42.5198,
+       0.88622,
+       0.0,
+       0.46327,
+       0.0,
+       1,
+       0.0,
+       -0.46327,
+       0.0,
+       0.88622
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4.9,
+       4.9,
+       4.9
+      ],
+      "CFrame": [
+       258.79371,
+       9.45,
+       -42.5198,
+       0.63585,
+       0.0,
+       0.77181,
+       0.0,
+       1,
+       0.0,
+       -0.77181,
+       0.0,
+       0.63585
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       177.97342,
+       3.0,
+       196.28156,
+       0.95618,
+       0.0,
+       0.29278,
+       0.0,
+       1,
+       0.0,
+       -0.29278,
+       0.0,
+       0.95618
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4,
+       4,
+       4
+      ],
+      "CFrame": [
+       -187.39986,
+       2.0,
+       232.60003,
+       -0.59279,
+       0.0,
+       0.80536,
+       0.0,
+       1,
+       0.0,
+       -0.80536,
+       0.0,
+       -0.59279
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       12,
+       6,
+       2
+      ],
+      "CFrame": [
+       -45.96355,
+       3.0,
+       313.04808,
+       -0.99004,
+       0.0,
+       0.14075,
+       0.0,
+       1,
+       0.0,
+       -0.14075,
+       0.0,
+       -0.99004
       ],
       "Color": [
        0.5882,
@@ -12826,18 +13023,18 @@
        2
       ],
       "CFrame": [
-       -110.75025,
+       155.59193,
        3.0,
-       166.87923,
-       0.89467,
+       56.66147,
+       0.39991,
        0.0,
-       0.44672,
+       0.91655,
        0.0,
        1,
        0.0,
-       -0.44672,
+       -0.91655,
        0.0,
-       0.89467
+       0.39991
       ],
       "Color": [
        0.5882,
@@ -12845,6 +13042,482 @@
        0.5882
       ],
       "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       171.88798,
+       3.5,
+       -30.31715,
+       -1.0,
+       0.0,
+       0.00279,
+       0.0,
+       1,
+       0.0,
+       -0.00279,
+       0.0,
+       -1.0
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4.9,
+       4.9,
+       4.9
+      ],
+      "CFrame": [
+       171.41597,
+       9.45,
+       -30.31715,
+       -0.92214,
+       0.0,
+       -0.38685,
+       0.0,
+       1,
+       0.0,
+       0.38685,
+       0.0,
+       -0.92214
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4,
+       4,
+       4
+      ],
+      "CFrame": [
+       -193.84205,
+       2.0,
+       148.68395,
+       0.05222,
+       0.0,
+       0.99864,
+       0.0,
+       1,
+       0.0,
+       -0.99864,
+       0.0,
+       0.05222
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       2.8,
+       2.8,
+       2.8
+      ],
+      "CFrame": [
+       -194.23547,
+       5.4,
+       148.68395,
+       -0.34079,
+       0.0,
+       0.94014,
+       0.0,
+       1,
+       0.0,
+       -0.94014,
+       0.0,
+       -0.34079
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       -93.16273,
+       3.0,
+       -130.99518,
+       -0.5628,
+       0.0,
+       0.82659,
+       0.0,
+       1,
+       0.0,
+       -0.82659,
+       0.0,
+       -0.5628
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       -200.46839,
+       3.0,
+       220.52055,
+       0.83829,
+       0.0,
+       0.54523,
+       0.0,
+       1,
+       0.0,
+       -0.54523,
+       0.0,
+       0.83829
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       -96.64354,
+       3.5,
+       249.27418,
+       0.23157,
+       0.0,
+       0.97282,
+       0.0,
+       1,
+       0.0,
+       -0.97282,
+       0.0,
+       0.23157
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       12,
+       6,
+       2
+      ],
+      "CFrame": [
+       200.50948,
+       3.0,
+       124.83954,
+       -0.16741,
+       0.0,
+       0.98589,
+       0.0,
+       1,
+       0.0,
+       -0.98589,
+       0.0,
+       -0.16741
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       127.00992,
+       3.0,
+       -186.57012,
+       -0.19803,
+       0.0,
+       0.9802,
+       0.0,
+       1,
+       0.0,
+       -0.9802,
+       0.0,
+       -0.19803
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       139.62813,
+       3.0,
+       -274.13214,
+       -0.99986,
+       0.0,
+       0.01699,
+       0.0,
+       1,
+       0.0,
+       -0.01699,
+       0.0,
+       -0.99986
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "CoverWall",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       16,
+       6,
+       2
+      ],
+      "CFrame": [
+       101.39394,
+       3.0,
+       -205.21298,
+       -0.94154,
+       0.0,
+       0.33691,
+       0.0,
+       1,
+       0.0,
+       -0.33691,
+       0.0,
+       -0.94154
+      ],
+      "Color": [
+       0.5882,
+       0.5882,
+       0.5882
+      ],
+      "Material": "Concrete",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       135.8507,
+       3.5,
+       113.92676,
+       -0.66379,
+       0.0,
+       0.74792,
+       0.0,
+       1,
+       0.0,
+       -0.74792,
+       0.0,
+       -0.66379
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       7,
+       7,
+       7
+      ],
+      "CFrame": [
+       165.35253,
+       3.5,
+       182.00409,
+       0.88229,
+       0.0,
+       0.47071,
+       0.0,
+       1,
+       0.0,
+       -0.47071,
+       0.0,
+       0.88229
+      ],
+      "Color": [
+       0.5451,
+       0.3922,
+       0.2353
+      ],
+      "Material": "WoodPlanks",
+      "Anchored": true,
+      "TopSurface": "Smooth",
+      "BottomSurface": "Smooth"
+     }
+    },
+    {
+     "name": "Crate",
+     "className": "Part",
+     "properties": {
+      "Size": [
+       4.9,
+       4.9,
+       4.9
+      ],
+      "CFrame": [
+       165.3195,
+       9.45,
+       182.00409,
+       0.62934,
+       0.0,
+       0.77713,
+       0.0,
+       1,
+       0.0,
+       -0.77713,
+       0.0,
+       0.62934
+      ],
+      "Color": [
+       0.5882,
+       0.4314,
+       0.2745
+      ],
+      "Material": "WoodPlanks",
       "Anchored": true,
       "TopSurface": "Smooth",
       "BottomSurface": "Smooth"
