@@ -1,0 +1,44 @@
+{
+  "name": "KingOfTheHill",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Shared": {
+        "$path": "src/shared"
+      }
+    },
+    "ServerScriptService": {
+      "Server": {
+        "$path": "src/server"
+      }
+    },
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "Client": {
+          "$path": "src/client"
+        }
+      },
+      "$properties": {
+        "CameraMaxZoomDistance": 128
+      }
+    },
+    "Players": {
+      "$properties": {
+        "CharacterAutoLoads": true
+      }
+    },
+    "Teams": {
+      "$className": "Teams"
+    },
+    "Workspace": {
+      "Map": {
+        "$path": "src/workspace/Map.model.json"
+      }
+    },
+    "Lighting": {
+      "$properties": {
+        "ClockTime": 14
+      }
+    }
+  }
+}
