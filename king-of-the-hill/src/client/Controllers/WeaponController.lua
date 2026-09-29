@@ -237,14 +237,14 @@ local function tryFire()
 		return
 	end
 	local now = os.clock()
-	if now - lastFire < FIRE_INTERVAL then
+	if now < lastFire + FIRE_INTERVAL then
 		return
 	end
 	local aim = getAimPoint()
 	if not aim then
 		return
 	end
-	lastFire = now
+	lastFire = if now - lastFire > FIRE_INTERVAL * 2 then now else lastFire + FIRE_INTERVAL
 	ammo -= 1
 	updateStatus()
 	fireRemote:FireServer(aim)
@@ -411,6 +411,11 @@ function WeaponController.Start(_self)
 				centerAim = false
 			end
 		elseif input.KeyCode == Enum.KeyCode.ButtonR2 then
+			local char = player.Character
+			local hum = char and char:FindFirstChildOfClass("Humanoid")
+			if hum and hum.SeatPart and hum.SeatPart:IsA("VehicleSeat") then
+				return -- R2 is heli climb while seated in a vehicle
+			end
 			padHeld = true
 			centerAim = true
 		elseif input.KeyCode == Enum.KeyCode.R then

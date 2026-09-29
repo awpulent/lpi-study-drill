@@ -160,10 +160,12 @@ local function computeSpawnCFrame(pad: BasePart): CFrame
 	local right = look:Cross(Vector3.yAxis)
 	local chosen = base
 	for _, offset in { 0, 14, -14, 28, -28, 42, -42 } do
-		local candidate = base + right * offset
-		chosen = candidate
-		if isFree(candidate) then
-			break
+		if math.abs(offset) <= pad.Size.X / 2 - 3 then
+			local candidate = base + right * offset
+			if isFree(candidate) then
+				chosen = candidate
+				break
+			end
 		end
 	end
 	return CFrame.lookAt(chosen, chosen + look)

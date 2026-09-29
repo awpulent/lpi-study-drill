@@ -18,6 +18,7 @@ type AmmoState = {
 	ammo: number,
 	reloading: boolean,
 	lastFire: number,
+	nextShot: number,
 }
 
 local states: { [Player]: AmmoState } = {}
@@ -310,7 +311,7 @@ function CombatService.GiveRifle(player: Player): (boolean, string)
 		return false, "Backpack unavailable"
 	end
 	local tool = buildRifle()
-	states[player] = { ammo = Config.Rifle.MagazineSize, reloading = false, lastFire = 0 }
+	states[player] = { ammo = Config.Rifle.MagazineSize, reloading = false, lastFire = 0, nextShot = 0 }
 	tool.Equipped:Connect(function()
 		sendAmmo(player)
 	end)
@@ -390,6 +391,17 @@ local function buildRayParams(player: Player, character: Model): RaycastParams
 				table.insert(exclude, v)
 			end
 		end
+		local hum = character:FindFirstChildOfClass("Humanoid")
+		local seat = hum and hum.SeatPart
+		if seat and seat:IsDescendantOf(vehicles) then
+			local vm: Instance? = seat
+			while vm and vm.Parent ~= vehicles do
+				vm = vm.Parent
+			end
+			if vm and not table.find(exclude, vm) then
+				table.insert(exclude, vm)
+			end
+		end
 	end
 	local params = RaycastParams.new()
 	params.FilterType = Enum.RaycastFilterType.Exclude
@@ -442,13 +454,14 @@ local function handleFire(player: Player, aimPoint: any)
 	end
 	local now = os.clock()
 	local interval = 1 / Config.Rifle.FireRate
-	if now - st.lastFire < interval * 0.8 then
+	if now < (st.nextShot or 0) - interval * 0.5 then
 		return
 	end
 	if st.ammo <= 0 then
 		startReload(player)
 		return
 	end
+	st.nextShot = math.max(st.nextShot or 0, now) + interval
 	st.lastFire = now
 	st.ammo -= 1
 	sendAmmo(player)

@@ -41,7 +41,7 @@ Style: Luau, tabs, `--!strict` where practical. No Toolbox assets. Everything is
 Each service is a table with `Init()` (no yields) and an optional `Start()`.
 
 **TeamService**
-- `Init`: creates the Teams from `Config.Teams` (AutoAssignable=true) and sets the SpawnLocation TeamColor from attributes.
+- `Init`: creates the Teams from `Config.Teams` (AutoAssignable=false (TeamService balances manually)) and sets the SpawnLocation TeamColor from attributes.
 - Balances assignment on PlayerAdded by putting the player on the smallest team.
 - `GetTeamName(player): string?`
 - `GetBase(teamName): Model`
@@ -131,7 +131,8 @@ Each service is a table with `Init()` (no yields) and an optional `Start()`.
   - R reloads.
   - Shows a custom crosshair and the hitmarker, and draws short-lived tracer beams from `WeaponFx`.
   - Touch and gamepad support: fire with the ButtonR2 key, or with an on-screen button when TouchEnabled.
-- **VehicleController**: when the local player sits in the VehicleSeat of a Helicopter they own:
+- **VehicleController**: when the local player sits in the VehicleSeat of a Helicopter (their own or a teammate's):
+  - Any teammate may pilot, not only the owner.
   - It drives flight on the client, because the client is the network owner.
   - Controls: W/S move forward and back, A/D yaw, Space climbs, LeftCtrl or Q descends.
   - It uses the vehicle's LinearVelocity and AlignOrientation.

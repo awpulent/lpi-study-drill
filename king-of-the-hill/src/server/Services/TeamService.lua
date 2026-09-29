@@ -143,6 +143,11 @@ function TeamService.Init(_self)
 	for _, p in Players:GetPlayers() do
 		if not (p.Team and teamConfigByName[p.Team.Name]) then
 			assignPlayer(p)
+			if p.Character then
+				task.defer(function()
+					p:LoadCharacter()
+				end)
+			end
 		end
 	end
 end
